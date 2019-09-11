@@ -1,21 +1,19 @@
-message DetectionBall {
-  required float  confidence = 1;
+message Ball {
   required float  x          = 2;
   required float  y          = 3;
   required float  z          = 4;
 }
 
-message DetectionRobot {
-  required float  confidence  =  1;
+message Robot {
   required uint32 robot_id    =  2;
   required float  x           =  3;
   required float  y           =  4;
   required float  orientation =  5;
 }
 
-message DetectionFrame {
-  required uint32             frame_number  = 1;
-  repeated SSL_DetectionBall  balls         = 2;
-  repeated SSL_DetectionRobot robots_yellow = 3;
-  repeated SSL_DetectionRobot robots_blue   = 4;
+message Frame {
+  required uint32 frame_number  = 1;
+  repeated Ball   balls         = 2;
+  repeated Robot  robots_yellow = 3;
+  repeated Robot  robots_blue   = 4;
 }
