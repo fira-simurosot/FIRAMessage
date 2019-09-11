@@ -1,3 +1,5 @@
+syntax = "proto2";
+
 message GameInfo {
 	required uint32 goal_blue    = 1;
 	required uint32 goal_yellow  = 2;
@@ -20,7 +22,7 @@ message GameStage {
 		PM_GoalKick_Yellow		= 11,
 		PM_GoalKick_Blue		= 12     
 	}
-	
+
 	required PlayMode mode = 3;
 	required uint32 vy = 4;
 }

@@ -1,3 +1,5 @@
+syntax = "proto2";
+
 message Command {
 	required uint32 id			= 1;
 	required float  vel_normal	= 2;
