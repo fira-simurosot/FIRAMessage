@@ -1,13 +1,13 @@
-message RobotCommand {
-	required uint32 id          = 1;
-	required float  velnormal   = 2;
-	required float  velangular  = 3;
+message Command {
+	required uint32 id			= 1;
+	required float  vel_normal	= 2;
+	required float  vel_angular	= 3;
 	required bool   wheelsspeed = 4;
-	optional float  wheel1      = 5;
-	optional float  wheel2      = 6;
+	optional float  wheel_left	= 5;
+	optional float  wheel_right	= 6;
 }
 
 message Commands {
-	repeated grSim_Robot_Command robot_commands = 1;
+	repeated Command robot_commands = 1;
 }
 
