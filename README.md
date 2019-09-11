@@ -18,4 +18,4 @@
  
 **positioning.proto:** ** TO DO **
 
->   The message sent from Teams to Referee to re-position robots and ball in kick-off.
+>   The message sent from Teams to Referee to re-position robots and ball in free-kicks.
