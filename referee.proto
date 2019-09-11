@@ -24,7 +24,6 @@ message GameStage {
 	}
 
 	required PlayMode mode = 3;
-	required uint32 vy = 4;
 }
 
 
