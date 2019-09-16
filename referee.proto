@@ -8,14 +8,14 @@ message GameInfo {
 message GameStage {
 
 	enum PlayMode {
-		PM_PlayOn 				= 0,
-		PM_FreeBall_LeftTop     = 1,
+		PM_PlayOn			= 0,
+		PM_FreeBall_LeftTop		= 1,
 		PM_FreeBall_LeftBot		= 2,
-		PM_FreeBall_RightTop	= 3,
-		PM_FreeBall_RightBot	= 4,
+		PM_FreeBall_RightTop		= 3,
+		PM_FreeBall_RightBot		= 4,
 		PM_PlaceKick_Yellow		= 5,
 		PM_PlaceKick_Blue		= 6,
-		PM_PenaltyKick_Yellow	= 7,
+		PM_PenaltyKick_Yellow		= 7,
 		PM_PenaltyKick_Blue		= 8,
 		PM_FreeKick_Yellow		= 9,
 		PM_FreeKick_Blue		= 10,
