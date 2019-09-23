@@ -7,7 +7,7 @@ message Ball {
 }
 
 message Robot {
-  required uint32 robot_id    =  1;
+  required uint32  robot_id    =  1;
   required double  x           =  2;
   required double  y           =  3;
   required double  orientation =  4;
