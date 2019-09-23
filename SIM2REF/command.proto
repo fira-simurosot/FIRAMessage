@@ -2,11 +2,12 @@ syntax = "proto2";
 
 message Command {
 	required uint32 id			= 1;
-	required float  vel_normal	= 2;
-	required float  vel_angular	= 3;
-	required bool   wheelsspeed = 4;
-	optional float  wheel_left	= 5;
-	optional float  wheel_right	= 6;
+	required bool 	yellowteam  = 2;
+	required double vel_normal	= 3;
+	required double vel_angular	= 4;
+	required bool   wheelsspeed = 5;
+	optional double wheel_left	= 6;
+	optional double wheel_right	= 7;
 }
 
 message Commands {
