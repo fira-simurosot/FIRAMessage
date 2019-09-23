@@ -12,4 +12,3 @@ message Command {
 message Commands {
 	repeated Command robot_commands = 1;
 }
-

@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+import "referee.proto"
+import "detection.proto"
+
+
+message Packet {
+	required Referee  	 ref = 1;
+	optional Environment env = 2;
+}
