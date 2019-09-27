@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+import "base.proto";
+
+// Messages that referee sends to platform.
+
+message FoulInfo {
+    enum FoulType {
+        PlayOn = 0;
+        FreeBallTop = 1;
+        FreeBallBot = 2;
+        PlaceKick = 3;
+        PenaltyKick = 4;
+        FreeKick = 5;
+        GoalKick = 6;
+    }
+
+    // PlayOn indicated running and other indicated foul.
+    FoulType type = 1;
+    // If type is not PlayOn, actor means who caused the foul.
+    Who actor = 2;
+    // Foul details.
+    string Reason = 3;
+}
+
+message PlacementError {
+    string error_str = 1;
+    Who whose = 2;
+}
+
+message PlacementFoulInfo {
+    // Errors in placement passed in detected by referee.
+    repeated PlacementError error = 1;
+    // Placement corrected by referee.
+    Environment corrected_placement = 2;
+}

@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+import "base.proto";
+import "command.proto";
+import "referee.proto";
+
+message RefereeCall {
+    // Referee service has two methods
+    oneof method {
+        JudgeCall judge = 1;
+        JudgePlacementCall judge_placement = 2;
+    }
+
+    // Determine if the `env` is a foul.
+    message JudgeCall {
+        Environment env = 1;
+    }
+
+    // Find invalid position in `env` and try to fix it.
+    // Referee judge the placement indicated by `env` argument,
+    // and the `foul_info` argument created by referee indicates
+    // the reason of foul.
+    message JudgePlacementCall {
+        Environment env = 1;
+        FoulInfo foul_info = 2;
+    }
+
+    // Result of JudgeCall
+    message JudgeResult {
+        FoulInfo foul_info = 1;
+    }
+
+    // Result of JudgePlacementCall
+    message JudgePlacementResult {
+        PlacementFoulInfo foul_info = 1;
+    }
+}
+
+message StrategyCall {
+    // Strategy service has two methods
+    oneof method {
+        GetWheelCall get_wheel = 1;
+        GetPlacementCall get_placement = 2;
+    }
+
+    // Control robots' actions based on `Environment`.
+    message GetWheelCall {
+        Environment env = 1;
+    }
+
+    // Control robots' placements based on `env` and `foul_info`.
+    // The `foul_info` argument includes the frame caused the foul.
+    message GetPlacementCall {
+        Environment env = 1;
+        FoulInfo foul_info = 2;
+    }
+
+    // Result of GetWheelCall
+    message GetWheelResult {
+        WheelControl wheel = 1;
+    }
+
+    // Result of GetPlacementCall
+    message GetPlacementResult {
+        PlacementControl placement = 1;
+    }
+}

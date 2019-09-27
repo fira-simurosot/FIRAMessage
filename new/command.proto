@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "base.proto";
+
+// Messages that strategy sends to platform in order to control robots.
+
+message WheelSpeed {
+    int32 robot_id = 1;
+    float wheel_right = 2;
+    float wheel_left = 3;
+}
+
+message WheelControl {
+    repeated WheelSpeed control = 1;
+}
+
+message PlacementControl {
+    Ball ball = 1;
+    repeated Robot robots = 2;
+}
