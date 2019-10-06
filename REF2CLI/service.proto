@@ -1,0 +1,12 @@
+service Refree{
+  rpc runStrategy (Environment) returns (Command) {}
+  rpc setBall (Environment) returns (Pos) {}
+  rpc setFormerRobots(Environment) returns (Robots) {}
+  rpc setLaterRobots(Environment) returns(Robots) {}
+}
+
+
+service Register{
+  rpc register (TeamName) returns (TeamInfo) {}
+}
+

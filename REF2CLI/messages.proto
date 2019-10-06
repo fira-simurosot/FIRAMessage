@@ -1,0 +1,73 @@
+message TeamName {
+  string name = 1;
+}
+
+message TeamInfo{
+ string name;
+ int32 port; 
+
+ enum color{
+   Y = 0;
+   B = 1;
+  }
+
+ enum side{
+  LEFT = 0;
+  RIGHT = 1; 
+ }
+
+
+ enum status{
+ NOK = 0;
+ OK = 1; 
+ }
+ 
+}
+
+message Pos{
+ float x;
+ float y;
+}
+
+message Robot{
+ int32 id;
+ Pos pos;
+ float dir;
+}
+
+
+message Ball{
+ Pos pos;
+}
+
+message Robots{
+repeated Robot robots; 
+}
+
+message Environment{
+ Ball ball;
+ repeated Robot our_team;
+ repeated Robot opp_team;
+ FoulInfo foulInfo;
+}
+
+message FoulInfo {
+    enum FoulType {
+        PlayOn = 0;
+        FreeBallTop = 1;
+        FreeBallBot = 2;
+        PlaceKick = 3;
+        PenaltyKick = 4;
+        FreeKick = 5;
+        GoalKick = 6;
+    } 
+
+message WheelSpeed {
+    int32 robot_id = 1;
+    float right = 2;
+    float left = 3;
+}
+
+message Command{
+	repeated WheelSpeed wheels;
+}
