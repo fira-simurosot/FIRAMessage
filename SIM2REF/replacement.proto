@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option csharp_namespace = "FiraSim.Referee.Proto.SimToRef";
+
 message RobotReplacement {
 	double x          = 1;
 	double y          = 2;

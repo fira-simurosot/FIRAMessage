@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option csharp_namespace = "FiraSim.Referee.Proto.RefToCli";
+
 message TeamName {
     string name = 1;
 }

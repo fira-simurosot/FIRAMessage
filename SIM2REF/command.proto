@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option csharp_namespace = "FiraSim.Referee.Proto.SimToRef";
+
 message Command {
 	uint32 id          = 1;
 	bool   yellowteam  = 2;
