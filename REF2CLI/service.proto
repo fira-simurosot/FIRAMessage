@@ -1,4 +1,8 @@
-service Refree{
+syntax = "proto3";
+
+import "REF2CLI/messages.proto";
+
+service Referee {
   rpc runStrategy (Environment) returns (Command) {}
   rpc setBall (Environment) returns (Pos) {}
   rpc setFormerRobots(Environment) returns (Robots) {}
@@ -6,7 +10,7 @@ service Refree{
 }
 
 
-service Register{
+service Register {
   rpc register (TeamName) returns (TeamInfo) {}
 }
 

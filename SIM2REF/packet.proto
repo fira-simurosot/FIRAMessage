@@ -1,7 +1,7 @@
 syntax = "proto3";
 
-import "command.proto";
-import "replacement.proto";
+import "SIM2REF/command.proto";
+import "SIM2REF/replacement.proto";
 
 
 message Packet {

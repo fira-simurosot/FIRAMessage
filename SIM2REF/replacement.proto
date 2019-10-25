@@ -17,6 +17,6 @@ message BallReplacement {
 }
 
 message Replacement {
-	grSim_BallReplacement           ball   = 1;
-	repeated grSim_RobotReplacement robots = 2;
+	BallReplacement           ball   = 1;
+	repeated RobotReplacement robots = 2;
 }

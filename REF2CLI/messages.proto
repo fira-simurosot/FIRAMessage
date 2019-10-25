@@ -1,54 +1,56 @@
+syntax = "proto3";
+
 message TeamName {
-  string name = 1;
+    string name = 1;
 }
 
 message TeamInfo{
- string name;
- int32 port; 
+    string name = 1;
+    int32 port = 2;
 
- enum color{
-   Y = 0;
-   B = 1;
-  }
+    enum color{
+        Y = 0;
+        B = 1;
+    }
 
- enum side{
-  LEFT = 0;
-  RIGHT = 1; 
- }
+    enum side{
+        LEFT = 0;
+        RIGHT = 1;
+    }
 
 
- enum status{
- NOK = 0;
- OK = 1; 
- }
- 
+    enum status{
+        NOK = 0;
+        OK = 1;
+    }
+
 }
 
 message Pos{
- float x;
- float y;
+    float x = 1;
+    float y = 2;
 }
 
 message Robot{
- int32 id;
- Pos pos;
- float dir;
+    int32 id = 1;
+    Pos pos = 2;
+    float dir = 3;
 }
 
 
 message Ball{
- Pos pos;
+    Pos pos = 1;
 }
 
 message Robots{
-repeated Robot robots; 
+    repeated Robot robots = 1;
 }
 
 message Environment{
- Ball ball;
- repeated Robot our_team;
- repeated Robot opp_team;
- FoulInfo foulInfo;
+    Ball ball = 1;
+    repeated Robot our_team = 2;
+    repeated Robot opp_team = 3;
+    FoulInfo foulInfo = 4;
 }
 
 message FoulInfo {
@@ -60,7 +62,8 @@ message FoulInfo {
         PenaltyKick = 4;
         FreeKick = 5;
         GoalKick = 6;
-    } 
+    }
+}
 
 message WheelSpeed {
     int32 robot_id = 1;
@@ -68,6 +71,7 @@ message WheelSpeed {
     float left = 3;
 }
 
-message Command{
-	repeated WheelSpeed wheels;
+message Command {
+    repeated WheelSpeed wheels = 1;
 }
+
