@@ -2,7 +2,7 @@ syntax = "proto3";
 
 import "command.proto";
 import "replacement.proto";
-import "enviroment.proto";
+import "environment.proto";
 
 option csharp_namespace = "FiraSim.Referee.Proto.SimToRef";
 
