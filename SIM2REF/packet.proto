@@ -2,10 +2,15 @@ syntax = "proto3";
 
 import "command.proto";
 import "replacement.proto";
+import "enviroment.proto";
 
 option csharp_namespace = "FiraSim.Referee.Proto.SimToRef";
 
 message Packet {
 	Commands    cmd     = 1;
 	Replacement replace = 2;
+}
+
+service Simulate {
+	rpc simulate (Packet) returns (Environment) {}
 }
