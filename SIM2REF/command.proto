@@ -5,9 +5,6 @@ option csharp_namespace = "FiraSim.Referee.Proto.SimToRef";
 message Command {
 	uint32 id          = 1;
 	bool   yellowteam  = 2;
-	double vel_normal  = 3;
-	double vel_angular = 4;
-	bool   wheelsspeed = 5;
 	double wheel_left  = 6;
 	double wheel_right = 7;
 }

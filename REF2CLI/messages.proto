@@ -10,7 +10,6 @@ message TeamName {
 
 message TeamInfo{
     string name = 1;
-    int32 port = 2;
 
     enum color{
         Y = 0;
