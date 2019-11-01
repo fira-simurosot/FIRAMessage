@@ -2,6 +2,8 @@ syntax = "proto3";
 
 option csharp_namespace = "FiraSim.Referee.Proto.RefToCli";
 
+import "common.proto";
+
 message TeamName {
     string name = 1;
 }
@@ -20,28 +22,10 @@ message TeamInfo{
         RIGHT = 1;
     }
 
-
     enum status{
         NOK = 0;
         OK = 1;
     }
-
-}
-
-message Pos{
-    float x = 1;
-    float y = 2;
-}
-
-message Robot{
-    int32 id = 1;
-    Pos pos = 2;
-    float dir = 3;
-}
-
-
-message Ball{
-    Pos pos = 1;
 }
 
 message Robots{
@@ -49,9 +33,7 @@ message Robots{
 }
 
 message Environment{
-    Ball ball = 1;
-    repeated Robot our_team = 2;
-    repeated Robot opp_team = 3;
+    Frame frame = 1;
     FoulInfo foulInfo = 4;
 }
 

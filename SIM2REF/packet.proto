@@ -1,14 +1,20 @@
 syntax = "proto3";
 
-import "command.proto";
-import "replacement.proto";
-import "environment.proto";
+import "SIM2REF/command.proto";
+import "SIM2REF/replacement.proto";
+import "common.proto";
 
 option csharp_namespace = "FiraSim.Referee.Proto.SimToRef";
 
 message Packet {
 	Commands    cmd     = 1;
 	Replacement replace = 2;
+}
+
+message Environment {
+	uint32 step = 1;
+	Frame frame = 2;
+	Field field = 3;
 }
 
 service Simulate {

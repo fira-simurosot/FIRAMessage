@@ -1,12 +1,13 @@
 syntax = "proto3";
 
-import "messages.proto";
+import "REF2CLI/messages.proto";
+import "common.proto";
 
 option csharp_namespace = "FiraSim.Referee.Proto.RefToCli";
 
 service Referee {
   rpc runStrategy (Environment) returns (Command) {}
-  rpc setBall (Environment) returns (Pos) {}
+  rpc setBall (Environment) returns (Ball) {}
   rpc setFormerRobots(Environment) returns (Robots) {}
   rpc setLaterRobots(Environment) returns(Robots) {}
 }
