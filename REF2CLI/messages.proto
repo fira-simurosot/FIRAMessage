@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+option csharp_namespace = "FiraSim.Referee.Proto.RefToCli";
+
+import "common.proto";
+
+message TeamName {
+    string name = 1;
+}
+
+message TeamInfo{
+    string name = 1;
+
+    enum color{
+        Y = 0;
+        B = 1;
+    }
+
+    enum side{
+        LEFT = 0;
+        RIGHT = 1;
+    }
+
+    enum status{
+        NOK = 0;
+        OK = 1;
+    }
+}
+
+message Robots{
+    repeated Robot robots = 1;
+}
+
+message Environment{
+    Frame frame = 1;
+    FoulInfo foulInfo = 4;
+}
+
+message FoulInfo {
+    enum FoulType {
+        PlayOn = 0;
+        FreeBallTop = 1;
+        FreeBallBot = 2;
+        PlaceKick = 3;
+        PenaltyKick = 4;
+        FreeKick = 5;
+        GoalKick = 6;
+    }
+}
+
+message WheelSpeed {
+    int32 robot_id = 1;
+    float right = 2;
+    float left = 3;
+}
+
+message Command {
+    repeated WheelSpeed wheels = 1;
+}
+
