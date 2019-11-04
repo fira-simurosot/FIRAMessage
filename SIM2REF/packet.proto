@@ -4,7 +4,7 @@ import "SIM2REF/command.proto";
 import "SIM2REF/replacement.proto";
 import "common.proto";
 
-package fira_message.sim_to_ref
+package fira_message.sim_to_ref;
 
 message Packet {
 	Commands    cmd     = 1;
