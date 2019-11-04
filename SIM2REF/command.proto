@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package fira_message.sim_to_ref
+package fira_message.sim_to_ref;
 
 message Command {
 	uint32 id          = 1;
