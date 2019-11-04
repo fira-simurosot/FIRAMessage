@@ -3,7 +3,7 @@ syntax = "proto3";
 import "REF2CLI/messages.proto";
 import "common.proto";
 
-option csharp_namespace = "FiraSim.Referee.Proto.RefToCli";
+package fira_message.ref_to_cli;
 
 service Referee {
   rpc RunStrategy (Environment) returns (Command) {}
