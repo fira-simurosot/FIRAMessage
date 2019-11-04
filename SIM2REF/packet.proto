@@ -18,5 +18,5 @@ message Environment {
 }
 
 service Simulate {
-	rpc simulate (Packet) returns (Environment) {}
+	rpc Simulate (Packet) returns (Environment) {}
 }
