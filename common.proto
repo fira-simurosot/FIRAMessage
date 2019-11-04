@@ -1,6 +1,7 @@
 syntax = "proto3";
 
-option csharp_namespace = "FiraSim.Referee.Proto";
+package fira_message
+option csharp_namespace = "FiraMessage";
 
 message Ball {
     double x = 1;

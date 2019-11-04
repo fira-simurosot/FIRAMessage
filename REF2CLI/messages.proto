@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option csharp_namespace = "FiraSim.Referee.Proto.RefToCli";
+package fira_message.ref_to_cli;
 
 import "common.proto";
 

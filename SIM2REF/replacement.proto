@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option csharp_namespace = "FiraSim.Referee.Proto.SimToRef";
+package fira_message.sim_to_ref
 
 import "common.proto";
 
