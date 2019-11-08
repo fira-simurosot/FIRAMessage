@@ -14,6 +14,6 @@ service Referee {
 
 
 service Register {
-  rpc Register (TeamName) returns (TeamInfo) {}
+  rpc Register (TeamInfo) returns (TeamName) {}
 }
 
