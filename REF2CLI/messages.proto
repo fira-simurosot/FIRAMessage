@@ -8,23 +8,19 @@ message TeamName {
     string name = 1;
 }
 
+enum Color{
+    Y = 0;
+    B = 1;
+}
+
+enum Side{
+    Left = 0;
+    Right = 1;
+}
+
 message TeamInfo{
-    string name = 1;
-
-    enum color{
-        Y = 0;
-        B = 1;
-    }
-
-    enum side{
-        LEFT = 0;
-        RIGHT = 1;
-    }
-
-    enum status{
-        NOK = 0;
-        OK = 1;
-    }
+    Color color = 1;
+    Side side = 2;
 }
 
 message Robots{
@@ -46,6 +42,9 @@ message FoulInfo {
         FreeKick = 5;
         GoalKick = 6;
     }
+
+    FoulType type = 1;
+    Side actor = 2;
 }
 
 message WheelSpeed {
