@@ -49,6 +49,7 @@ message FoulInfo {
         SecondHalf = 1;
         Overtime = 2;
         PenaltyShootout = 3;
+        Stopped = 4;
     }
 
     PhaseType phase = 1;
