@@ -14,13 +14,12 @@ enum Color{
 }
 
 enum Side{
-    Left = 0;
-    Right = 1;
+    Self = 0;
+    Opponent = 1;
 }
 
 message TeamInfo{
     Color color = 1;
-    Side side = 2;
 }
 
 message Robots{
@@ -35,16 +34,27 @@ message Environment{
 message FoulInfo {
     enum FoulType {
         PlayOn = 0;
-        FreeBallTop = 1;
-        FreeBallBot = 2;
         PlaceKick = 3;
         PenaltyKick = 4;
         FreeKick = 5;
         GoalKick = 6;
+        FreeBallLeftTop = 7;
+        FreeBallRightTop = 8;
+        FreeBallLeftBot = 9;
+        FreeBallRightBot = 10;
     }
 
-    FoulType type = 1;
-    Side actor = 2;
+    enum PhaseType {
+        FirstHalf = 0;
+        SecondHalf = 1;
+        Overtime = 2;
+        PenaltyShootout = 3;
+    }
+
+    PhaseType phase = 1;
+
+    FoulType type = 2;
+    Side actor = 3;
 }
 
 message WheelSpeed {
