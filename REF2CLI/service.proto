@@ -6,14 +6,12 @@ import "common.proto";
 package fira_message.ref_to_cli;
 
 service Referee {
+  rpc Register (TeamInfo) returns (TeamName) {}
+
   rpc RunStrategy (Environment) returns (Command) {}
   rpc SetBall (Environment) returns (Ball) {}
   rpc SetFormerRobots(Environment) returns (Robots) {}
   rpc SetLaterRobots(Environment) returns(Robots) {}
 }
 
-
-service Register {
-  rpc Register (TeamInfo) returns (TeamName) {}
-}
 
