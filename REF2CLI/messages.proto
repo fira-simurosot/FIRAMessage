@@ -26,9 +26,25 @@ message Robots{
     repeated Robot robots = 1;
 }
 
+message Time{
+    int32 minute = 1;
+    int32 seconds = 2;
+}
+
+message Statistics{
+    int32 scoreYellow = 1;
+    int32 scoreBlue = 2;
+    Time time = 3;
+}
+
+message Empty{
+
+}
+
 message Environment{
     Frame frame = 1;
     FoulInfo foulInfo = 4;
+    Statistics statistics = 5;
 }
 
 message FoulInfo {

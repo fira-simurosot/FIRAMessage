@@ -14,4 +14,8 @@ service Referee {
   rpc SetLaterRobots(Environment) returns(Robots) {}
 }
 
+service GameController {
+    rpc manualReferee (FoulInfo) returns (Environment) {}
+    rpc sendEnvironment (Environment) returns (Empty) {}
+}
 
