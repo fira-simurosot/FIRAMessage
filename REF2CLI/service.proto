@@ -15,7 +15,6 @@ service Referee {
 }
 
 service GameController {
-    rpc manualReferee (FoulInfo) returns (Environment) {}
-    rpc sendEnvironment (Environment) returns (Empty) {}
+    rpc handyReferee (Environment) returns (HandyRef) {}
 }
 

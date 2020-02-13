@@ -26,20 +26,17 @@ message Robots{
     repeated Robot robots = 1;
 }
 
-message Time{
-    int32 minute = 1;
-    int32 seconds = 2;
-}
 
 message Statistics{
     int32 scoreYellow = 1;
     int32 scoreBlue = 2;
-    Time time = 3;
 }
 
-message Empty{
-
+message HandyRef{
+    FoulInfo foulInfo = 1;
+    bool isOwerWriting = 2;
 }
+
 
 message Environment{
     Frame frame = 1;
